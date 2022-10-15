@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int N, K;
+    scanf("%d%d",&N,&K);
+    int arr[N],count[100000]={0};
+    for(int index = 0; index < N; index++)
+    {
+        scanf("%d",&arr[index]);
+        count[arr[index]]++;
+    }
+    for(int index = 0; index < N; index++)
+    {
+        if(count[arr[index]]==K)
+        {
+            count[arr[index]]--;
+            printf("%d ",arr[index]);
+            
+        }
+    }
+    
+}
