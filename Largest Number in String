@@ -1,0 +1,12 @@
+#Your code below
+def maxi(s):
+    n,r=0,0
+    for i in range(len(s)):
+        if s[i]>="0" and s[i]<="9":
+            n=n*10+int(int(s[i])-0)
+        else:
+            r=max(r,n)
+            n=0
+    return max(r,n)
+s=input().strip()
+print(maxi(s))
