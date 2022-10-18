@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int n;
+    cin>>n;
+    int ctr=1;
+    while(ctr<=n){
+        if(ctr<n/2){
+            cout<<2*ctr<<" ";
+        }
+        else{
+            cout<<3*ctr<<" ";
+        }
+        ctr+=1;
+    }
+
+
+}
