@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int r,c;
+    cin>>r>>c;
+    int mini=INT_MAX;
+    int maxi=INT_MIN;
+    int a[r][c];
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            cin>>a[i][j];
+            if(a[i][j]<mini){
+                mini=a[i][j];
+            }
+            if(a[i][j]>maxi){
+                maxi=a[i][j];
+            }
+        }
+    }
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            if(a[i][j]==mini || a[i][j]==maxi){
+                cout<<"* ";
+            }
+            else{
+                cout<<a[i][j]<<" ";
+            }
+        }
+        cout<<endl;
+    }
+
+
+}
