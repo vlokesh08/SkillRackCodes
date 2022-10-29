@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int n;
+    cin>>n;
+    int a[n],count=0;
+    int ind=0;
+    while(ind<n){
+        cin>>a[ind];
+        ind++;
+    }
+    ind=0;
+    while(ind<n-1){
+        int cmpindex=ind+1;
+        while(cmpindex<n){
+            if(a[ind]%a[cmpindex]==0 || a[cmpindex]%a[ind]==0){
+                count++;
+            }
+            cmpindex++;
+        }
+        ind++;
+    }
+    cout<<count;
+
+
+}
