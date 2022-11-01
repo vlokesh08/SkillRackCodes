@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int n,x;
+    cin>>n>>x;
+    int curr,sum=0,ctr=1;
+    while(ctr<=n){
+        cin>>curr;
+        sum+=pow(x,curr);
+        ctr++;
+    }
+    cout<<sum/x;
+}
