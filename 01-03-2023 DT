@@ -1,0 +1,66 @@
+The program must accept an integer N and a character CH as the input. The program
+must print the desired pattern as shown in the Example Input/Output section.
+Boundary Condition(s):
+2 <= N <= 100
+Input Format:
+The first line contains the values of N and CH separated by a space.
+Output Format:
+The first 3xN lines containing the desired pattern as shown in the Example
+Input/Output section.
+Example Input/Output 1:
+Input:
+4 *
+Output:
+---*
+--***
+-*-*-*
+*--*--*
+---*
+---*
+---*
+---*
+*--*--*
+-*-*-*
+--***
+---*
+Example Input/Output 2:
+Input:
+5 #
+Output:
+----#
+---###
+--#-#-#
+-#--#--#
+#---#---#
+----#
+----#
+----#
+----#
+----#
+#---#---#
+-#--#--#
+--#-#-#
+---###
+----#
+
+--------------------------------------------------------------------------------------------------------------------
+
+a,b=map(str,input().strip().split())
+a=int(a)
+l=[]
+k=0
+for i in range(a):
+    temp = "-"*(a-i-1)
+    if(i==0):
+        temp+=b
+    else:
+        temp1=b+("-"*k)+b+("-"*k)+b
+        temp+=temp1
+        k+=1
+    l.append(temp)
+    print(temp)
+for i in range(a):
+    print("-"*(a-1),sep="",end="")
+    print(b)
+for i in l[::-1]:
+    print(i)
