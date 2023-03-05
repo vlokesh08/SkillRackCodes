@@ -1,0 +1,34 @@
+#Your code below
+n=int(input())
+k=n//2
+l=k+1
+temp=l
+hehe=[]
+for i in range(1,k+1):
+    lok=""
+    lok+=str(i)
+    lok+=" "
+    lok+="* "*(n-temp-1)
+    if(i==1):
+        j=l
+        while(j!=0):
+            lok+=str(j)
+            lok+=" "
+            j-=1
+        l+=1
+    else:
+        lok+=str(l)
+        lok+=" "
+        lok+="* "*((n//2))
+    print(lok[:-1])
+    hehe.append(lok[:-1])
+t=k+1
+for i in range(n//2):
+    print(t,end=" ")
+    t+=1
+for i in range((n//2)+1):
+    print(t,end=" ")
+    t-=1
+print()
+for i in hehe[::-1]:
+    print(i[::-1])
