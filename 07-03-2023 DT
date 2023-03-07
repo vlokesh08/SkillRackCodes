@@ -1,0 +1,41 @@
+s=input().strip()
+for i in range(1,len(s)-1):
+    print(int(s[:i])*int(s[i:]),end=" ")
+
+------------------------------------------------------------
+
+
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    string s;
+    cin>>s;
+    for(int i=1;i<s.length();i++) {
+        int k = stoi(s.substr(0,i));
+        int l = stoi(s.substr(i,s.length()));
+        cout<<k*l<<" ";
+    }
+
+}
+
+
+----------------------------------------------------------
+
+
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        for(int i=1;i<s.length();i++){
+            int k=Integer.parseInt(s.substring(0,i));
+            int l=Integer.parseInt(s.substring(i,s.length()));
+            System.out.print(k*l+" ");
+        }
+
+	}
+}
