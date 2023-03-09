@@ -1,0 +1,18 @@
+
+#Your code below
+s=input().strip()
+eve="24680"
+e=0
+c=0
+odd=""
+for i in s:
+    if i in eve:
+        e+=int(i)
+    else:
+        c+=int(i)
+        odd+=i
+if e>=c:
+    print(int(s[::-1]))
+else:
+    print(int(odd))
+    
