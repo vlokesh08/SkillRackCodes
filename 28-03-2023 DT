@@ -1,0 +1,103 @@
+The program must accept an integer N as the input. The program must print the desired pattern as
+shown in the Example Input/Output section.
+Boundary Condition(s):
+3 <= N <= 100
+Input Format:
+The first line contains the value of N.
+Output Format:
+The list of lines containing the desired pattern as shown in the Example Input/Output section.
+Example Input/Output 1:
+Input:
+4
+Output:
+|||* * * *
+||* * - * *
+|* - * * - *
+* * * * * * *
+|* - * * - *
+||* * - * *
+|||* * * *
+Example Input/Output 2:
+Input:
+5
+Output:
+||||* * * * *
+|||* * --- * *
+||* - * - * - *
+|* --- * * --- *
+* * * * * * * * *
+|* --- * * --- *
+||* - * - * - *
+|||* * --- * *
+||||* * * * *
+Example Input/Output 3:
+Input:
+6
+Output:
+|||||* * * * * *
+||||* * ----- * *
+|||* - * --- * - *
+||* --- * - * --- *
+|* ----- * * ----- *
+* * * * * * * * * * *
+|* ----- * * ----- *
+||* --- * - * --- *
+|||* - * --- * - *
+||||* * ----- * *
+|||||* * * * * *
+
+---------------------------------------------------------------------------------------------------------------
+
+
+#Your code below
+n=int(input())
+k=n-1
+l=[]
+s="|"*(n-1)
+s+="* "*n
+l.append(s)
+k-=1
+t=0
+lala=1
+for i in range(n-4):
+    lala+=2
+if(n==3):
+    lala=0
+print(l[0])
+for i in range(n-2):
+    o=""
+    o+=('|'*k)
+    o+="* "
+    puk=t
+    if i==0:
+        t=0
+    o+="-"*t
+    if i!=0:
+        o+=" "
+    o+="* "
+    lok = lala
+    if i==n-1:
+        lala=0
+    o+="-"*lala
+    if lala>0:
+        o+=" "
+    o+="* "
+    o+="-"*t
+    if i!=0:
+        o+=" "
+    o+="*"
+    if i==0:
+        t=1
+    if i==n-1:
+        lala=lok
+    k-=1
+    if i!=0:
+        t+=2
+    lala-=2
+    l.append(o)
+    print(o)
+temp = "* "*((2*n)-1)
+l.append(temp)
+for i in l[::-1]:
+    print(i)
+# print('|'*(k),end="")
