@@ -1,0 +1,18 @@
+void removeVowels(char* str)
+{
+    int len = strlen(str);
+    char temp[1001];
+    int k=0;
+    for(int i=0;i<len;i++) {
+        char c = tolower(str[i]);
+        int f=0;
+        if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u') {
+            f=1;
+        }
+        if(f==0) {
+            temp[k++]=str[i];
+        }
+    }
+    temp[k]='\0';
+    strcpy(str,temp);
+}
