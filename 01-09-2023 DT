@@ -1,0 +1,16 @@
+#Your code below
+n = int(input())
+l = list(map(int,input().split()))
+eve = []
+odd = []
+for i in l:
+    if i&1:
+        odd.append(i)
+    else:
+        eve.append(i)
+odd.sort()
+ind = 0
+if len(odd)&1:
+    ind=1
+k = sum(odd[ind:])
+print(sum(eve)+k)
