@@ -1,0 +1,12 @@
+#Your code below
+n = int(input())
+l = list(map(int,input().split()))
+k = max(l)
+ans = [['-' for j in range(n)] for i in range(k)]
+for i in range(n):
+    j = k-l[i]
+    while j<k:
+        ans[j][i]='#'
+        j+=1
+for i in ans:
+    print(*i)
