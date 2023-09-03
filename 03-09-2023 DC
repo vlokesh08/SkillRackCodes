@@ -1,0 +1,5 @@
+#Your code below
+s=input().strip()
+n = int(input())
+for i in range(n-1,len(s),2):
+    print(s[i],end="")
