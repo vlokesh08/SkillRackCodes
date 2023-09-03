@@ -1,0 +1,8 @@
+#Your code below
+n = int(input())
+l = list(map(int,input().split()))
+ans=0
+for i in range(min(l),max(l)+1):
+    if i not in l:
+        ans+=1
+print(ans)
