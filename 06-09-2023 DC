@@ -1,0 +1,12 @@
+#Your code below
+def solve(k,hehe):
+    for i in range(hehe,len(k),2):
+        if k[hehe]!=k[i]:
+            return False
+    return True
+n = int(input())
+k = bin(n).replace("0b","")
+if solve(k,0) and solve(k,1):
+    print("YES")
+else:
+    print("NO")
