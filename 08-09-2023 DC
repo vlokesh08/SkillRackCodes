@@ -1,0 +1,10 @@
+#Your code below
+a,b = map(int,input().split())
+f=0
+for i in range(a,b+1):
+    k = list(str(i))
+    if len(set(k))==len(k):
+        f=1
+        print(i,end=" ")
+if f==0:
+    print(-1)
